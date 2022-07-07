@@ -1,6 +1,6 @@
 # BSPWM
 
-[!screenshot](./assets/screenshot.png)
+![screenshot](./assets/screenshot.png)
 
 ## Requirements
 
