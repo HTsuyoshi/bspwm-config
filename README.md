@@ -9,7 +9,7 @@
 - `sxhkd`
 - `polybar`
 	- `playerctl`
-	- `Monapo`
+	- `Monapo Font`
 - `TerminessTTF Nerd Font`
 
 ## Colorscheme
