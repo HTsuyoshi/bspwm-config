@@ -1,15 +1,45 @@
+# ----- BASICS -----
+#
 # Make sxhkd reload its configuration files
 super + r
 	pkill -USR1 -x sxhkd
- 
+
 # Quit or restart bspwm
 super + shift + {q,r}
 	bspc {quit,wm -r}
- 
-# Create a new terminal window or swap the current one to the biggest one in the screen 
-super + shift + Return
-	st
 
+#Create a new terminal window or swap the current one to the biggest one in the screen 
+super + shift + Return
+	alacritty
+
+# ----- WINDOWS -----
+#
+# Change the window state
+super + {t,shift + t,f,shift + f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Focus or send a window to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Expand a window by moving one of its side outward
+super + shift + {h,j,k,l}
+	bspc node -z {left -40 0,bottom 0 40,top 0 -40,right 40 0}
+
+# Focus on selected window
+super + Return
+	bspc node -s biggest.local
+
+# Move through the windows
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# Close or kill a window
+super + {shift +,_} c
+	bspc node -{c,k}
+
+# ----- PROGRAMS -----
+#
 # Screenshot
 super + shift + s
 	flameshot gui
@@ -17,19 +47,3 @@ super + shift + s
 # Rofi
 super + p
 	rofi -show run
- 
-# Close or kill a window
-super + {_,shift +} c
-	bspc node -{c,k}
- 
-# Change the window state
-super + {t,ctrl + t,l,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
- 
-# Expand a window by moving one of its side outward
-super + shift + {h,j,k,l}
-	bspc node -z {left -40 0,bottom 0 40,top 0 -40,right 40 0}
- 
-# Focus or send a window to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'

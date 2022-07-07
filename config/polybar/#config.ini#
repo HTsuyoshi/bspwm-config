@@ -1,6 +1,6 @@
 ; Modules
 include-file = $HOME/.config/polybar/modules/battery.ini
-include-file = $HOME/.config/polybar/modules/cpu.ini
+include-file = $HOME/.config/polybar/modules/c_pu.ini
 include-file = $HOME/.config/polybar/modules/date.ini
 include-file = $HOME/.config/polybar/modules/memory.ini
 include-file = $HOME/.config/polybar/modules/playerctl.ini
@@ -41,7 +41,7 @@ enable-ipc = true
 ;separator = |
 ;separator-foreground = ${colors.disabled}
 
-;tray-position = right
+;tray-position = rightC
 
 ; wm-restack = generic
 wm-restack = bspwm
