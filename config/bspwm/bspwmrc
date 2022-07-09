@@ -4,6 +4,7 @@ xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
 $HOME/.config/polybar/launch.sh
 $HOME/.config/bspwm/colors.sh
+feh --bg-fill $HOME/.config/bspwm/wallpaper/wallpaper.png
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
