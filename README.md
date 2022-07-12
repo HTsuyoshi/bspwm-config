@@ -1,6 +1,7 @@
 # BSPWM
 
 ![screenshot](./assets/screenshot.png)
+![screenshot-mirage](./assets/screenshot-mirage.png)
 
 ## Requirements
 
