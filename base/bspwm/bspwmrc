@@ -1,10 +1,12 @@
 #!/bin/bash
+# Testing purposes
+bspc rule -r "*"
 
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
 $HOME/.config/polybar/launch.sh
 $HOME/.config/bspwm/colors.sh
-feh --bg-fill $HOME/.config/bspwm/wallpaper/wallpaper.png
+feh --bg-fill $HOME/.config/bspwm/wallpaper/street.png
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -21,6 +23,6 @@ bspc config pointer_modifier        mod4
 
 bspc config automatic_scheme        spiral
 
-bspc rule -a discord desktop='^1'
-bspc rule -a spotify desktop='^9'
-bspc rule -a keepassxc desktop='^10' follow=on
+bspc rule -a discord desktop='^1' follow=off
+bspc rule -a Spotify desktop='^9' follow=on
+bspc rule -a KeePassXC desktop='^10' follow=on
