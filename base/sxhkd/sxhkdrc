@@ -47,3 +47,7 @@ super + shift + s
 # Rofi
 super + p
 	rofi -show run
+
+# Zoom
+super + z
+	xzoom
