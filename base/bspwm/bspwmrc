@@ -2,6 +2,11 @@
 # Testing purposes
 bspc rule -r "*"
 
+[[ $(pidof dunst) ]] || dunst &
+[[ $(pidof picom) ]] || picom&
+setxkbmap br
+xrandr --output eDP-1 --brightness 0.6
+
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
 $HOME/.config/polybar/launch.sh
