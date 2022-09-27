@@ -10,7 +10,7 @@ super + shift + {q,r}
 
 #Create a new terminal window or swap the current one to the biggest one in the screen 
 super + shift + Return
-	alacritty
+	[[ $(tmux ls) ]] && alacritty -e tmux a || alacritty -e tmux
 
 # ----- WINDOWS -----
 #
