@@ -8,9 +8,13 @@ super + r
 super + shift + {q,r}
 	bspc {quit,wm -r}
 
-#Create a new terminal window or swap the current one to the biggest one in the screen 
+#Create a new terminal window and attach into the tmux session
 super + shift + Return
 	[[ $(tmux ls) ]] && alacritty -e tmux a || alacritty -e tmux
+
+#Create a new terminal window
+super + Return
+	alacritty
 
 # ----- WINDOWS -----
 #
