@@ -8,12 +8,12 @@ super + r
 super + shift + {q,r}
 	bspc {quit,wm -r}
 
-#Create a new terminal window and attach into the tmux session
+# Create a new terminal window and attach into the tmux session
 super + shift + Return
 	[[ $(tmux ls) ]] && alacritty -e tmux a || alacritty -e tmux
 
-#Create a new terminal window
-super + Return
+# Create a new terminal window
+super + shift + a
 	alacritty
 
 # ----- WINDOWS -----
