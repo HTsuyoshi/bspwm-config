@@ -12,7 +12,7 @@ sxhkd -m 1 &
 $HOME/.scripts/battery/battery.sh &
 $HOME/.config/polybar/launch.sh &
 $HOME/.config/bspwm/colors.sh &
-feh --bg-fill $HOME/.config/bspwm/wallpaper/street.png
+feh --bg-fill --recursive $HOME/.config/bspwm/wallpaper-dark
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
