@@ -3,6 +3,10 @@
 ![screenshot](./assets/screenshot.png)
 ![screenshot-mirage](./assets/screenshot-mirage.png)
 
+## Wallpapers
+
+I DO NOT OWN THE WALLPAPERS!!
+
 ## Requirements
 
 - `stow`
