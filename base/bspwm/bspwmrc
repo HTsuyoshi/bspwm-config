@@ -9,8 +9,9 @@ xrandr --output eDP-1 --brightness 0.6
 
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
-$HOME/.config/polybar/launch.sh
-$HOME/.config/bspwm/colors.sh
+$HOME/.scripts/battery/battery.sh &
+$HOME/.config/polybar/launch.sh &
+$HOME/.config/bspwm/colors.sh &
 feh --bg-fill $HOME/.config/bspwm/wallpaper/street.png
 
 bspc monitor -d I II III IV V VI VII VIII IX X
