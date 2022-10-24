@@ -10,7 +10,7 @@ I DO NOT OWN THE WALLPAPERS!!
 Use cronjob to change the wallpaper automaticaly:
 
 ```cron
-10 * * * * $USER feh --bg-fill $HOME/.config/bspwm/wallpaper-dark
+*/10 * * * * DISPLAY=:0 feh --bg-fill --recursive --randomize /home/feeva/opt/bspwm-config/base/bspwm/wallpaper-dark
 ```
 
 
