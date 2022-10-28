@@ -13,31 +13,23 @@ function remove {
 	rm -r $HOME/.config/{alacritty,bspwm,polybar,sxhkd}
 }
 
-SETTING_UP="setting $1 theme"
-REMOVING="removing old theme"
-
 [ -z $1 ] && usage && exit
 
 case $1 in
 	'light')
-		echo "$REMOVING"
-		remove
 		echo 'setting light theme'
-		stow base -t $HOME/.config/ -v
-		stow config -t $HOME/.config/ -v;;
-	'dark')
-		echo "$REMOVING"
-		remove
-		echo "$SETTING_UP"
-		stow base -t $HOME/.config/ -v
-		stow "$1-config" -t $HOME/.config/ -v;;
+		[[ -f /usr/share/fonts/TTF/opus-icon.ttf ]] || doas cp ./font/opus-icon.ttf /usr/share/fonts/TTF/;;
 	'mirage')
-		echo "$REMOVING"
-		remove
-		echo "$SETTING_UP"
-		stow base -t $HOME/.config/ -v
-		stow "$1-config" -t $HOME/.config/ -v;;
+		echo "$SETTING_UP";;
 	*) usage && exit
 esac
+
+SETTING_UP="setting $1 theme"
+
+echo 'removing old theme'
+remove
+
+[[ $1 == 'light' ]] && stow config -t $HOME/.config/ -v || stow "$1-config" -t $HOME/.config/ -v
+stow base -t $HOME/.config/ -v
 
 chmod 774 $HOME/.config/{sxhkd/sxhkdrc,bspwm/bspwmrc}
